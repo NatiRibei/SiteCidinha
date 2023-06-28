@@ -2,6 +2,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -77,8 +79,8 @@ html {
 .content .list-menu li a:hover {
     z-index: 2;
     background-color: #333333;
-    border-bottom: 4px solid #f05ed9;
-    color: #f05ed9;
+    border-bottom: 4px solid #f07e6a;
+    color: #f07e6a;
 }
 
 /* Primeira Seção */
@@ -87,80 +89,92 @@ html {
 
     height: 100vh;
     width: 100vw;
-    background-image: linear-gradient(rgba(29, 29, 29, 0.8), rgba(29, 29, 29, 0.8)), url(./img/cidinhafinal.mp4);
-    background-blend-mode: darken;
+    background-image: linear-gradient(rgba(29, 29, 29, 0.4), rgba(29, 29, 29, 0.4)), url(./img/cidinhafinal.mp4);
+
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position-y: 50px;
+    /*background-position-y: 50px;*/
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.first-section video {
-    position: absolute;
-    left: 0%;
-    bottom: 0%;
-
-
-
+.first-section .video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
     min-width: 100%;
     min-height: 100%;
-    z-index: 1;
+    width: auto;
+    height: auto;
+    z-index: -1000;
+    background: url(images/torre.jpg) no-repeat;
+    background-size: cover;
+
+
+
 }
 
 .first-section .conteudo-principal {
-    z-index: 2;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    animation: bounceInLeft;
+    animation-duration: 4.5s;
 
 }
 
 .first-section h1 {
     color: #d7cdc1;
-    font-size: 6rem;
-    text-shadow: 0.1em 0.1em 0.2em black;
-    text-transform: uppercase;
-    margin-bottom: 6rem;
-    font-family: 'Indie Flower', cursive;
+    font-size: 8rem;
+    text-shadow: 0.5Rem 0.5Rem 0.5Rem rgba(0, 0, 0, 0.925);
+
+    margin-bottom: 1rem;
+    font-family: 'Satisfy', cursive;
 }
 
 .first-section h2 {
     color: rgb(177, 177, 177);
+    text-shadow: 0.5Rem 0.5Rem 0.5Rem rgba(0, 0, 0, 0.925);
     font-size: 3rem;
     font-weight: 400;
     text-transform: uppercase;
-    font-family: 'Indie Flower', cursive;
-    margin-bottom: 3rem;
+    font-family: 'Satisfy', cursive;
+
 }
 
 .btn button {
+    z-index: 2;
     width: 230px;
     height: 60px;
     cursor: pointer;
     text-transform: uppercase;
-    background-color: #f05ed9;
+    text-shadow: 0.5Rem 0.5Rem 0.5Rem rgba(0, 0, 0, 0.767);
+    background-color: #f07e6a;
     border-radius: 10px;
     color: black;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.603);
     font-weight: 700;
     transition: all 400ms ease-in;
     margin-top: 5rem;
 }
 
 .btn button:hover {
-    border: 1px solid #f05ed9;
+    border: 1px solid #f07e6a;
     background-color: transparent;
-    color: #f05ed9;
+    color: #f07e6a;
 }
 
 .btn {
-    width: 480px;
-    display: flex;
-    justify-content: space-between;
+    z-index: 2;
+    width: 230px;
+    /*dobrar tamanho se for usar os dois botões
+    /*display: flex;*/
+    /*justify-content: space-between;*/
 
 }
 
@@ -169,10 +183,11 @@ html {
 .discografia {
     width: 100vw;
     display: flex;
+
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: linear-gradient(rgba(12, 12, 12, 0.8), rgba(15, 15, 15, 0.8)), url(./img/Cidinha5.jpg);
+    background-image: linear-gradient(rgba(12, 12, 12, 0.986), rgba(15, 15, 15, 0.3)), url(./img/back.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -185,66 +200,47 @@ html {
 }
 
 .itens-discografia {
-    width: 100%;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 400px));
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
+    display: flex;
+    padding: 32px;
 }
 
-.itens-discografia .info {
-    background-color: rgba(221, 221, 221, 0.527);
-    border: none;
+.itens-discografia .card {
+    height: 100vh;
+    width: 100%;
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 1.5rem;
+    text-align: center;
+    background: white;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    max-height: 468px;
+    margin-left: 32px;
+    background: #f6f9ff1f;
+
+    color: #434343;
+
+    font-size: 3rem;
 }
 
-.itens-discografia .info h3 {
-    font-size: 1.8rem;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
+.itens-discografia .card h3 {
+    font-size: 100%;
+    margin: 16px 0;
 
 }
 
-.itens-discografia .info h4 {
-    font-size: 1.4rem;
-    text-transform: uppercase;
-    margin-bottom: 0.6rem;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    grid-template-columns: 150px 150px;
-    margin-left: 6rem;
-}
 
-.itens-discografia .info h4 span {
-    font-size: 1.6rem;
-    color: #585858;
-    margin-left: 1.5rem;
 
-}
 
 .itens-discografia div {
     background-color: #5e525283;
     box-shadow: 0px 0px 4px 1px;
 }
 
-.itens-discografia img {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-left: 10rem;
-
-
-    width: 10;
-    height: 200px;
+.itens-discografia .card .icon img {
+    width: 100%;
+    cursor: pointer;
 }
 
 .itens-discografia .info .ouvir1 {
@@ -274,40 +270,90 @@ html {
     color: white;
     display: flex;
     align-items: center;
+    flex-direction: column;
     justify-content: center;
 }
 
-.contentsobre {
+.sobre-nos .main .contentsobre {
     z-index: 2;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    max-height: 468px;
+    margin-left: 32px;
+}
+
+.sobre-nos .main .contentsobre2 {
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    max-height: 468px;
+    margin-left: 0px;
+
+}
+
+.contentsobre3 {
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    max-height: 468px;
+    margin-left: 32px;
 }
 
 .main {
 
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
 }
 
 .sobre-nos img {
-
-    width: 400px;
+    z-index: 2;
+    width: 300px;
     height: 400px;
     margin-top: 10rem;
     margin-left: 10rem;
+    margin-right: 10rem;
     border: 2px solid rgb(155, 155, 155);
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.603);
 }
 
-.contentsobre h2 {
+.sobre-nos h2 {
     z-index: 2;
     font-size: 6rem;
     margin-bottom: 1rem;
     font-family: 'Indie Flower', cursive;
+    text-shadow: 5px 5px rgba(0, 0, 0, 0.603);
 }
 
 .contentsobre p {
+
+    z-index: 2;
+    text-align: center;
+    font-size: 1.8rem;
+    margin-top: 10rem;
+    width: 600px;
+}
+
+.contentsobre2 p {
+
+    z-index: 2;
+    text-align: center;
+    font-size: 1.8rem;
+    width: 600px;
+}
+
+.contentsobre3 p {
 
     z-index: 2;
     text-align: center;
