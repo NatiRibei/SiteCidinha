@@ -215,7 +215,7 @@ html {
     background: white;
     padding: 1rem 1.5rem;
     border-radius: 8px;
-    max-height: 468px;
+    max-height: 300px;
     margin-left: 32px;
     background: #f6f9ff1f;
 
@@ -240,14 +240,17 @@ html {
 
 .itens-discografia .card .icon img {
     width: 100%;
+    height: 100%;
+
     cursor: pointer;
 }
 
-.itens-discografia .info .ouvir1 {
-    width: 200px;
-    height: 35px;
+.itens-discografia .card .icon {
+    width: 100%;
+    height: 100%;
+
     margin-top: 0.5rem;
-    background-color: #f05ed9;
+    background-color: #f05eda3d;
     border-radius: 5px;
     text-transform: uppercase;
     cursor: pointer;
@@ -255,7 +258,7 @@ html {
     transition: all 200ms ease-in;
 }
 
-.itens-discografia .info .ouvir1:hover {
+.itens-discografia .card .icon:hover {
     background-color: #5e5252;
     color: rgb(255, 255, 255);
 }
@@ -264,6 +267,10 @@ html {
 
 .sobre-nos {
     z-index: 2;
+    background-image: linear-gradient(rgba(12, 12, 12, 0.986), rgba(15, 15, 15, 0.158)), url(./img/cha1.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
     background-color: #1f1e1f;
     width: 100%;
     padding-bottom: 5rem;
@@ -330,10 +337,10 @@ html {
 
 .sobre-nos h2 {
     z-index: 2;
-    font-size: 6rem;
+    font-size: 10rem;
     margin-bottom: 1rem;
     font-family: 'Indie Flower', cursive;
-    text-shadow: 5px 5px rgba(0, 0, 0, 0.603);
+    text-shadow: 5px 5px rgba(0, 0, 0, 0.829);
 }
 
 .contentsobre p {
